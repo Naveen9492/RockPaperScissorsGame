@@ -111,9 +111,11 @@ Rules image is displayed dynamically
 
 Playing View:
 
+https://assets.ccbp.in/frontend/content/react-js/rock-paper-scissors-lg-playing-output.png
 
 Result View:
 
+https://assets.ccbp.in/frontend/content/react-js/rock-paper-scissors-lg-game-results-output.png
 
 Rules Modal:
 
