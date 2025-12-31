@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Naveen9492/RockPaperScissorsGame/static/css/main.a67f6b82.chunk.css",
+    "main.js": "/Naveen9492/RockPaperScissorsGame/static/js/main.9e9daac5.chunk.js",
+    "main.js.map": "/Naveen9492/RockPaperScissorsGame/static/js/main.9e9daac5.chunk.js.map",
+    "runtime-main.js": "/Naveen9492/RockPaperScissorsGame/static/js/runtime-main.e94c307b.js",
+    "runtime-main.js.map": "/Naveen9492/RockPaperScissorsGame/static/js/runtime-main.e94c307b.js.map",
+    "static/js/2.77890dae.chunk.js": "/Naveen9492/RockPaperScissorsGame/static/js/2.77890dae.chunk.js",
+    "static/js/2.77890dae.chunk.js.map": "/Naveen9492/RockPaperScissorsGame/static/js/2.77890dae.chunk.js.map",
+    "index.html": "/Naveen9492/RockPaperScissorsGame/index.html",
+    "static/css/main.a67f6b82.chunk.css.map": "/Naveen9492/RockPaperScissorsGame/static/css/main.a67f6b82.chunk.css.map",
+    "static/js/2.77890dae.chunk.js.LICENSE.txt": "/Naveen9492/RockPaperScissorsGame/static/js/2.77890dae.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e94c307b.js",
+    "static/js/2.77890dae.chunk.js",
+    "static/css/main.a67f6b82.chunk.css",
+    "static/js/main.9e9daac5.chunk.js"
+  ]
+}
