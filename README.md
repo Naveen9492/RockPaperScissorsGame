@@ -1,154 +1,143 @@
-In this project, let's build a **Rock Paper Scissors** by applying the concepts we have learned till now.
+Rock Paper Scissors Game 🎮✂️🪨
 
-### Refer to the image below:
+This is a React-based Rock Paper Scissors game built using React, Styled Components, and React Popup. The game allows a user to play against a computer opponent with live score tracking and a results view.
 
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/rock-paper-scissors-output.gif" alt="rock paper scissors output" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
+You can see the live version here: Live Demo
 
-### Design Files
+🎯 Features
 
-<details>
-<summary>Click to view</summary>
+Interactive Game Play
 
-- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/rock-paper-scissors-sm-outputs.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Playing View](https://assets.ccbp.in/frontend/content/react-js/rock-paper-scissors-lg-playing-output.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Game Results View](https://assets.ccbp.in/frontend/content/react-js/rock-paper-scissors-lg-game-results-output.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Game Rules View](https://assets.ccbp.in/frontend/content/react-js/rock-paper-scissors-lg-rules-output.png)
+Click Rock, Paper, or Scissors to make a choice.
 
-</details>
+Opponent choice is randomly generated on each turn.
 
-### Set Up Instructions
+The game displays the result view showing your choice, opponent choice, and the result (YOU WON, YOU LOSE, IT IS DRAW).
 
-<details>
-<summary>Click to view</summary>
+Score Tracking
 
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
+The score is displayed at the top and updates automatically based on game results.
 
-### Completion Instructions
+YOU WON → score increments by 1
 
-<details>
-<summary>Functionality to be added</summary>
-<br/>
+YOU LOSE → score decrements by 1
 
-The app must have the following functionalities
+IT IS DRAW → score remains the same
 
-- When you click on the **Rules** button, it should trigger a popup, and rules image should be displayed
-- Initially, the score displayed should be `0`
-- The App is provided with `choicesList`. It consists of a list of choice objects with the following properties in each choice object
+Rules Popup
 
-  |   Key    | Data Type |
-  | :------: | :-------: |
-  |    id    |  String   |
-  | imageUrl |  String   |
+Clicking the Rules button opens a modal with the game rules.
 
-- When any of the three buttons (i.e Rock, Paper, Scissors) is clicked, then the [Game Results View](https://assets.ccbp.in/frontend/content/react-js/rock-paper-scissors-lg-game-results-output.png) should be displayed
-- In the Game Results View, the opponent choice should be generated randomly among these three buttons (i.e Rock, Paper, Scissors)
-- When the **Rock** button is clicked, then the rock image should be displayed as your choice in the Game Results View
-- When the **Paper** button is clicked, then the paper image should be displayed as your choice in the Game Results View
-- When the **Scissors** button is clicked, then the scissors image should be displayed as your choice in the Game Results View
+The modal can be closed with a close icon button (RiCloseLine).
 
-  #### Game Rules
+Play Again Functionality
 
-    <details>
-    <summary>Click to view the Game Rules</summary>
-    <br/>
-    <img src="https://assets.ccbp.in/frontend/react-js/rock-paper-scissor/rules-image.png" alt="rules image" style="width:500px" />
-    <br/>
+Clicking PLAY AGAIN returns the user to the initial playing view.
 
-  - Game result based on choices
+📂 Project Structure
 
-    - When your choice is **paper** and the opponent choice is **rock**, then the result will be `YOU WON`
-    - When your choice is **scissors** and the opponent choice is **rock**, then the result will be `YOU LOSE`
-    - When your choice is **rock** and the opponent choice is **paper**, then the result will be `YOU LOSE`
-    - When your choice is **scissors** and the opponent choice is **paper**, then the result will be `YOU WON`
-    - When your choice is **rock** and the opponent choice is **scissors**, then the result will be `YOU WON`
-    - When your choice is **paper** and the opponent choice is **scissors**, then the result will be `YOU LOSE`
-    - When your choice and the opponent choice match, then the result will be `IT IS DRAW`
+All components are in the src/components directory:
 
-    </details>
+Home – Main container and game logic
 
-- When the result is `YOU WON`, then the score should be incremented by one
-- When the result is `IT IS DRAW`, then there shouldn't be any change in the score
-- When the result is `YOU LOSE`, then the score should be decremented by one
-- When the **PLAY AGAIN** button is clicked, then the [Playing View](https://assets.ccbp.in/frontend/content/react-js/rock-paper-scissors-lg-playing-output.png) should be displayed
+Header – Displays game title and score
 
-</details>
+Popup – Rules modal
 
-### Quick Tips
+Styled components for layout, buttons, and images
 
-<details>
-<summary>Click to view</summary>
-<br>
+choicesList provides the three game choices:
 
-- You can use `Math.random()` function to get a random number (float value) in range 0 to less than 1 (`0 <= randomNumber < 1`)
+const choicesList = [
+  { id: 'ROCK', imageUrl: 'rock-image.png' },
+  { id: 'SCISSORS', imageUrl: 'scissors-image.png' },
+  { id: 'PAPER', imageUrl: 'paper-image.png' },
+]
 
-  ```
-  Math.random()
-  ```
+🎨 Styling
 
-- You can use `Math.floor()` function that returns the **largest integer less than or equal to a given number**
+Colors
 
-  ```js
-  console.log(Math.floor(5.95)); // output: 5
-  ```
+Dark Blue: #223a5f – background
 
-</details>
+White: #ffffff – text & modal background
 
-### Important Note
+Fonts
 
-<details>
-<summary>Click to view</summary>
+Score: Roboto
 
-<br/>
+Buttons/Headers: Bree Serif
 
-- You can use **reactjs-popup** for displaying the modal
-- `RiCloseLine` icon from `react icons` can be used for the **close** button at `React Popup`
+Layout
 
-**The following instructions are required for the tests to pass**
+Responsive design for all screen sizes (<576px, >=576px, >=768px)
 
-- **Styled Components** should be used for styling purposes
-- The Page should consist of three HTML button elements with `data-testid` attribute values as **rockButton**, **scissorsButton** and **paperButton** respectively
-- In Game Results View, the page should consist of an HTML image element with alt as **your choice** and src as URL for your choice image
-- In Game Results View, the page should consist of an HTML image element with alt as **opponent choice** and src as URL for opponent choice image
-- **Roboto** should be applied as `font-family` for **Score** value
+Flexbox and Grid used for button arrangement
 
-</details>
+Styled components for reusable buttons, cards, and containers
 
-### Resources
+⚙️ Implementation Details
 
-<details>
-<summary>Image URLs</summary>
+Result Calculation
 
-- [https://assets.ccbp.in/frontend/react-js/rock-paper-scissor/rules-image.png](https://assets.ccbp.in/frontend/react-js/rock-paper-scissor/rules-image.png) alt should be **rules**
+if (yourChoice === opponentChoice) result = 'IT IS DRAW'
+else if ((yourChoice === 'ROCK' && opponentChoice === 'SCISSORS') ||
+         (yourChoice === 'PAPER' && opponentChoice === 'ROCK') ||
+         (yourChoice === 'SCISSORS' && opponentChoice === 'PAPER')) result = 'YOU WON'
+else result = 'YOU LOSE'
 
-</details>
 
-<details>
-<summary>Colors</summary>
+State Management
 
-<br/>
+score – Tracks game score
 
-<div style="background-color: #ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
-<div style="background-color: #223a5f; width: 150px; padding: 10px; color: white">Hex: #223a5f</div>
+yourChoice – Stores user's selection
 
-</details>
+oppenentChoice – Stores computer selection
 
-<details>
-<summary>Font-families</summary>
+resultView – Toggles between playing view and result view
 
-- Roboto
-- Bree Serif
+matchResult – Stores game result text
 
-</details>
+Popup & Modal
 
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
+Uses reactjs-popup
+
+Close button uses RiCloseLine icon
+
+Rules image is displayed dynamically
+
+🖼️ Screenshots
+
+Playing View:
+
+
+Result View:
+
+
+Rules Modal:
+
+
+⚡ How to Run Locally
+
+Clone the repository:
+
+git clone https://github.com/naveen9492/RockPaperScissorsGame.git
+cd RockPaperScissorsGame
+
+
+Install dependencies:
+
+npm install
+
+
+Start the development server:
+
+npm start
+
+🚀 Deployment
+
+The app is deployed on GitHub Pages:
+https://naveen9492.github.io/RockPaperScissorsGame/
+
+Deployed using gh-pages branch and npm run deploy.
