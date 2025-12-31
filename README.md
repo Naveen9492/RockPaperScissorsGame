@@ -111,14 +111,15 @@ Rules image is displayed dynamically
 
 Playing View:
 
-https://assets.ccbp.in/frontend/content/react-js/rock-paper-scissors-lg-playing-output.png
+<div align="center"> <img src="https://assets.ccbp.in/frontend/content/react-js/rock-paper-scissors-lg-playing-output.png" alt="Playing View" width="400"> </div>
 
 Result View:
 
-https://assets.ccbp.in/frontend/content/react-js/rock-paper-scissors-lg-game-results-output.png
+<div align="center"> <img src="https://assets.ccbp.in/frontend/content/react-js/rock-paper-scissors-lg-game-results-output.png" alt="Result View" width="400"> </div>
 
 Rules Modal:
 
+<div align="center"> <img src="https://assets.ccbp.in/frontend/content/react-js/rock-paper-scissors-lg-rules-output.png" alt="Rules Modal" width="400"> </div>
 
 ⚡ How to Run Locally
 
